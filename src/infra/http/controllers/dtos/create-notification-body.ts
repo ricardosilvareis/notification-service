@@ -1,14 +1,16 @@
 /* eslint-disable prettier/prettier */
-import { IsNotEmpty, IsUUID, Length } from 'class-validator';
+import { IsNotEmpty, IsString, IsUUID, Length } from 'class-validator';
 
 
 export class CreateNotificationBody {
 
     @IsNotEmpty()
     @Length(5, 240)
+    @IsString()
     content: string;
 
     @IsNotEmpty()
+    @IsString()
     category: string;
 
 
