@@ -7,8 +7,7 @@ describe('Notification', () => {
         const notification = new Notification({
             content: new Content('content'),
             category: 'Category',
-            createdAt: new Date(),
-            recipienId: '5555'
+            recipientId: '5555'
         });
 
         expect(notification).toBeTruthy();
